@@ -1,0 +1,659 @@
+/* -----------------------------------------------
+                  varibles
+----------------------------------------------- */
+:root {
+  --orange: #F38101;
+  --blue: #144097;
+  --grey: #d9d9d9;
+  --white: #FFFFFF;
+  --black: #000000;
+
+}
+
+/* -----------------------------------------------
+                      Reset
+----------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* -----------------------------------------------
+                  basics
+----------------------------------------------- */
+body {
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h1, h2 {
+  font-family: 'Ultra';
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 1.875rem;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  font-family: 'Actor';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.05rem;
+}
+
+a {
+  font-family: 'Actor';
+  font-size: 1.25rem;
+}
+
+/* -----------------------------------------------
+              Mobile first grid
+----------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* -----------------------------------------------
+              Header
+----------------------------------------------- */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* -----------------------------------------------
+           Navigations menu - mobil
+----------------------------------------------- */
+.navigation_container {
+  background-color: var(--grey);
+  z-index: 1;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  padding: 5px 10px;
+  width: 90px;
+}
+
+.mobileiconlabel {
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+  padding: 0px 10px;
+}
+
+.menuitem {
+  display: block;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  color: var(--blue);
+  z-index: 2;
+}
+
+a:hover{
+  color: var(--orange);
+}
+
+/* ----------------------------CHECKBOX VINGET AF - MOBIL -------------------------*/
+.menuitems_container,
+.mobileicon,
+.kurv-pc {
+  display: none;
+}
+
+/* ----------------------------VIS MENUITEMS NÃR DER ER TRYKKET - MOBIL -------------------------*/
+.navigation_container input:checked~.menuitems_container {
+  display: block;
+}
+
+/* -----------------------------------------------
+                  Forside
+----------------------------------------------- */
+.forside_img {
+  max-width: 100%;
+}
+
+.content1 {
+  padding-bottom: 3rem;
+}
+
+.content1 h1 {
+  color: var(--blue);
+}
+
+.content1 p {
+  text-align: center;
+}
+
+/* -----------------------------------------------
+                   Tanken bag
+----------------------------------------------- */
+.tankenbag-text {
+  text-align: center;
+  padding: 1em;
+  line-height: 30px;
+}
+
+.tankenbagcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Ændret til min-height for at tage højde for indhold over folden */
+  padding: 20px;
+  /* Tilføjet polstring for at skabe plads omkring indholdet */
+  box-sizing: border-box;
+}
+
+.tankenbagcontainer h1 {
+  color: var(--blue);
+}
+
+.tankenbag-text {
+  text-align: center;
+  padding: 1em;
+  line-height: 30px;
+}
+
+.tankenbagcontainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------------------------------------
+                   Events
+----------------------------------------------- */
+.overskriftevents {
+  color: var(--blue);
+  text-align: center;
+}
+
+.eventstext {
+  text-align: center;
+  padding: 1.875rem;
+  letter-spacing: 0.05rem;
+}
+
+.eventslogoer {
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.eventslogoer a {
+  padding: 10px;
+}
+
+.accordion {
+  background-color: var(--white);
+  font-family: 'Ultra';
+  color: var(--blue);
+  font-size: 1.875rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  padding: 1.8rem;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+  border-bottom: 5px solid var(--orange);
+}
+
+.ugevalg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ugerne a {
+  padding: 0.5rem;
+  letter-spacing: 0.02rem;
+  color: var(--blue);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.content2 {
+  color: black;
+  padding-bottom: 3rem;
+  background-color: var(--white);
+  padding: 1.875rem;
+}
+
+.kalendercontainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* -----------------------------------------------
+                   Juleklip
+----------------------------------------------- */
+.juleklipflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Ændret til min-height for at tage højde for indhold over folden */
+  padding: 20px;
+  /* Tilføjet polstring for at skabe plads omkring indholdet */
+  box-sizing: border-box;
+}
+
+.juleklipflex img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------------------------------------
+                   Menukort
+----------------------------------------------- */
+.overskriftmenu {
+  padding: 1.875rem;
+  letter-spacing: 0.05rem;
+  color: var(--blue);
+}
+
+.menutext {
+  text-align: center;
+  padding: 1.875rem;
+  letter-spacing: 0.05rem;
+}
+
+.menukortbanner {
+  max-width: 80%;
+}
+
+.menukortbannercontainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.content1{
+  padding-bottom: 3rem;
+}
+
+.content1 p{
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+table {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+h3{
+  padding-left: 3rem;
+  padding-top: 5rem;
+  color: var(--orange);
+  font-family: 'Ultra';
+  font-size: 1.875rem;}
+
+.vare {
+  width: 80%;
+  padding-left: 3rem;
+  font-family: 'Actor';
+  letter-spacing: 0.05rem;
+  font-size: 1.25rem;
+}
+
+.pris {
+  width: 20%;
+  font-family: 'Actor';
+  letter-spacing: 0.05rem;
+  font-size: 1.25rem;
+
+}
+
+.accordion {
+  background-color: var(--white);
+  font-family: 'Ultra';
+  color: var(--blue);
+  font-size: 1.875rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  padding: 1.8rem;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+  border-bottom: 4px solid var(--orange);
+  padding-top: 3rem;
+}
+
+.panel {
+  padding: 0 20px;
+  display: none;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+/* -----------------------------------------------
+                   galleri
+----------------------------------------------- */
+.galleritext {
+  text-align: center;
+  padding: 1.875rem;
+  letter-spacing: 0.05rem;
+}
+
+.gallerioverskrift {
+  color: var(--blue);
+  text-align: center;
+}
+
+div.gallery {
+  width: 180px;
+}
+
+div.gallery img:hover {
+  border: 2px solid var(--orange);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  padding: 10%;
+}
+
+.gallerisection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+/* -----------------------------------------------
+                   Footer
+----------------------------------------------- */
+footer {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.aabningstider {
+  background: var(--orange);
+  color: var(--white);
+  padding-bottom: 3rem;
+}
+
+.flex_aabningstider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+}
+
+.ugedage {
+  padding-right: 2rem;
+}
+
+.tider {
+  padding-left: 2rem;
+}
+
+.footer_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.insta_icon {
+  padding-right: 10px;
+}
+
+.fb_icon {
+  padding-left: 10px;
+}
+
+.kort_footer {
+  padding-top: 1em;
+}
+
+.footer_img {
+  max-width: 60%;
+}
+
+.allrightstext {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 2%;
+}
+
+/* -----------------------------------------------
+                 media queries
+----------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .footer_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+/* ------------------------------------------------------ Styling af desktop starter her -------------------------- */
+/* ------------------------------------------------------ Styling af desktop starter her -------------------------- */
+/* ------------------------------------------------------ Styling af desktop starter her -------------------------- */
+/* ------------------------------------------------------ Styling af desktop starter her -------------------------- */
+
+/*dette gør at burgermenuen kommer*/
+@media screen and (min-width: 768px) {
+
+  /*    main {
+      max-width: 1440px;
+     margin: auto;
+  } */
+
+
+  /*------------------------------ NAVIGATIONSBAR - Desktop--------------------------*/
+
+  /*------------------------------ FJERN MOBILICON / burgermenu- Desktop--------------------------*/
+
+  .mobileiconlabel,
+  .mobileicon,
+  .back-button,
+  .mobile-title {
+    display: none;
+  }
+
+  /*------------------------------ LOGO - Desktop --------------------------*/
+
+  .logo {
+    width: 90px;
+    margin-left: 40px;
+  }
+
+  .kurv-mobil {
+    display: none;
+  }
+
+
+  .nav_filler {
+    width: 115px;
+  }
+
+
+  /*------------------------------ ROW FUNKTION I MENUBAR - Desktop --------------------------*/
+
+  .menuitems_container {
+    display: flex;
+  }
+
+
+  .navigation_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*------------------------------ DROPDOWN MENUBAR MED LIST OG UNORDERED LIST - Desktop --------------------------*/
+
+
+  .menuitem {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 100;
+
+  }
+
+  nav {
+    width: 100%;
+    background-color: var(--grey);
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+  }
+
+  nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    text-decoration: none;
+  }
+
+  nav ul li a {
+    display: block;
+    color: var(--orange);
+    font-size: 16px;
+    padding: 14px 14px;
+    text-decoration: none;
+  }
+
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 4px 4px 4px 4px;
+  }
+
+  nav ul li:hover ul {
+    display: block;
+  }
+
+  nav ul li ul li {
+    width: 180px;
+    border-radius: 4px;
+  }
+
+  nav ul li ul li a {
+    padding: 8px 14px;
+  }
+
+  nav ul li ul li a:hover {
+    background: rgb(244, 244, 241);
+  }
+
+  .ekstra {
+    color: var(--black);
+    font-size: 16px;
+  }
+
+    /* Styling menukort til desktop */
+    .vare {
+      width: 80%;
+      padding-left: 15rem;
+      font-family: 'Actor';
+      letter-spacing: 0.05rem;
+      font-size: 1.25rem;
+    }
+    h3{
+      padding-left: 15rem;
+      padding-top: 5rem;
+      color: var(--orange);
+      font-family: 'Ultra';
+      font-size: 1.875rem;}
+}
